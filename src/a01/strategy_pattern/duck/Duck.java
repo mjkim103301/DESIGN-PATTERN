@@ -3,7 +3,7 @@ package a01.strategy_pattern.duck;
 import a01.strategy_pattern.fly.FlyBehavior;
 import a01.strategy_pattern.quack.QuackBehavior;
 
-public class Duck {
+public abstract class Duck {
     private FlyBehavior flyBehavior;
     private QuackBehavior quackBehavior;
 
@@ -11,8 +11,7 @@ public class Duck {
         System.out.println("오리가 물에 뜨고 있습니다.");
     }
 
-    public void display() {
-    }
+    public abstract void display();
 
     public void performQuack() {
         quackBehavior.quack();
