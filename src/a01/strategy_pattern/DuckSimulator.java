@@ -10,7 +10,7 @@ public class DuckSimulator {
         duckInformation(new DecoyDuck());
     }
 
-    public static void duckInformation(Duck duck){
+    public static void duckInformation(Duck duck) {
         System.out.println("============ start ==========");
         duck.display();
         duck.performQuack();
