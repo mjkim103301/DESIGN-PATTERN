@@ -6,10 +6,27 @@ import a01.strategy_pattern.quack.QuackBehavior;
 public class Duck {
     private FlyBehavior flyBehavior;
     private QuackBehavior quackBehavior;
-    public void swim(){}
-    public void display(){}
-    public void performQuack(){}
-    public void performFly(){}
-    public void setFlyBehavior(){}
-    public void setQuackBehavior(){}
+
+    public void swim() {
+        System.out.println("오리가 물에 뜨고 있습니다.");
+    }
+
+    public void display() {
+    }
+
+    public void performQuack() {
+        quackBehavior.quack();
+    }
+
+    public void performFly() {
+        flyBehavior.fly();
+    }
+
+    public void setFlyBehavior(FlyBehavior flyBehavior) {
+        this.flyBehavior = flyBehavior;
+    }
+
+    public void setQuackBehavior(QuackBehavior quackBehavior) {
+        this.quackBehavior = quackBehavior;
+    }
 }
