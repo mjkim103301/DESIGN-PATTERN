@@ -17,7 +17,7 @@ public class ForecastDisplay implements Observer, DisplayElement {
         StringBuilder sb = new StringBuilder();
         sb.append("기상예보: ");
 
-        if (currentPressure > 50f) {
+        if (currentPressure > lastPressure) {
             sb.append("맑은 날씨가 예상됩니다.");
         } else {
             sb.append("비가 올 것 같습니다.");
