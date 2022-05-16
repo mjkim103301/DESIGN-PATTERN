@@ -22,6 +22,7 @@ public class StarbuzzCoffee {
         beverage3 = new Ice(beverage3);
         sb.append(beverage3.getDescription()).append(", ").append(beverage3.cost() + "원").append("\n");
 
+
         System.out.println(sb);
 
     }

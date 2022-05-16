@@ -1,7 +1,11 @@
 package a03.decorator_pattern.beverage;
 
 public abstract class Beverage {
-    String description = "기본 음료";
+    private String description = "기본 음료";
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public String getDescription() {
         return description;
