@@ -4,6 +4,7 @@ import a03.decorator_pattern.beverage.Beverage;
 import a03.decorator_pattern.beverage.CaramelMacchiato;
 import a03.decorator_pattern.beverage.Espresso;
 import a03.decorator_pattern.beverage.HouseBlend;
+import a03.decorator_pattern.beverage.Size;
 import a03.decorator_pattern.condiment.Ice;
 import a03.decorator_pattern.condiment.Whip;
 
@@ -22,7 +23,10 @@ public class StarbuzzCoffee {
         beverage3 = new Ice(beverage3);
         sb.append(beverage3.getDescription()).append(", ").append(beverage3.cost() + "원").append("\n");
 
-
+        Beverage beverage4=new Espresso(Size.GRANDE);
+        beverage4=new Ice(beverage4);
+        beverage4=new Ice(beverage4);
+        sb.append(beverage4.getDescription()).append(", ").append(beverage4.cost() + "원").append("\n");
         System.out.println(sb);
 
     }
