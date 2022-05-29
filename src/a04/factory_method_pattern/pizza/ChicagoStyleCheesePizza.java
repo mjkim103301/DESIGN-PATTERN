@@ -1,4 +1,4 @@
-package a04.factory_pattern.pizza;
+package a04.factory_method_pattern.pizza;
 
 public class ChicagoStyleCheesePizza extends Pizza {
 

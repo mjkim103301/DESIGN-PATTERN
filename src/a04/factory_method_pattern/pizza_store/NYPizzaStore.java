@@ -1,8 +1,8 @@
-package a04.factory_pattern.pizza_store;
+package a04.factory_method_pattern.pizza_store;
 
-import a04.factory_pattern.pizza.NYStyleCheesePizza;
-import a04.factory_pattern.pizza.NYStylePepperoniPizza;
-import a04.factory_pattern.pizza.Pizza;
+import a04.factory_method_pattern.pizza.NYStyleCheesePizza;
+import a04.factory_method_pattern.pizza.NYStylePepperoniPizza;
+import a04.factory_method_pattern.pizza.Pizza;
 
 public class NYPizzaStore extends PizzaStore {
 

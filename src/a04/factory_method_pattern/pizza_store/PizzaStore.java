@@ -1,6 +1,6 @@
-package a04.factory_pattern.pizza_store;
+package a04.factory_method_pattern.pizza_store;
 
-import a04.factory_pattern.pizza.Pizza;
+import a04.factory_method_pattern.pizza.Pizza;
 
 public abstract class PizzaStore {
 
