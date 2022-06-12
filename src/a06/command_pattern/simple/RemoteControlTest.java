@@ -1,4 +1,4 @@
-package a06.command_pattern;
+package a06.command_pattern.simple;
 
 public class RemoteControlTest {
 	public static void main(String[] args) {
