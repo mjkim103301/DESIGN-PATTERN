@@ -1,4 +1,4 @@
-package a5.singleton_pattern;
+package a05.singleton_pattern;
 
 public class Singleton {
     private static Singleton uniqueInstance;

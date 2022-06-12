@@ -1,4 +1,4 @@
-package a5.singleton_pattern;
+package a05.singleton_pattern;
 
 public class SingletonDCL {
     private static volatile SingletonDCL uniqueInstance;
