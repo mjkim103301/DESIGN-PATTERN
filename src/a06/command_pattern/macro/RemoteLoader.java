@@ -9,25 +9,32 @@ public class RemoteLoader {
         Light kitchenLight = new Light("Kitchen");
         GarageDoor garageDoor = new GarageDoor("Garage");
 
-        LightOnCommand livingRoomLightOn =
-                new LightOnCommand(livingRoomLight);
-        LightOffCommand livingRoomLightOff =
-                new LightOffCommand(livingRoomLight);
-        LightOnCommand kitchenLightOn =
-                new LightOnCommand(kitchenLight);
-        LightOffCommand kitchenLightOff =
-                new LightOffCommand(kitchenLight);
+        /**
+         * 람다를 사용하지 않은 방식
+         */
+//        LightOnCommand livingRoomLightOn =
+//                new LightOnCommand(livingRoomLight);
+//        LightOffCommand livingRoomLightOff =
+//                new LightOffCommand(livingRoomLight);
+//        LightOnCommand kitchenLightOn =
+//                new LightOnCommand(kitchenLight);
+//        LightOffCommand kitchenLightOff =
+//                new LightOffCommand(kitchenLight);
+//
+//
+//        GarageDoorUpCommand garageDoorUp =
+//                new GarageDoorUpCommand(garageDoor);
+//        GarageDoorDownCommand garageDoorDown =
+//                new GarageDoorDownCommand(garageDoor);
+//
+//
+//        remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
+//        remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
+//        remoteControl.setCommand(2, garageDoorUp, garageDoorDown);
 
-
-        GarageDoorUpCommand garageDoorUp =
-                new GarageDoorUpCommand(garageDoor);
-        GarageDoorDownCommand garageDoorDown =
-                new GarageDoorDownCommand(garageDoor);
-
-
-        remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
-        remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
-        remoteControl.setCommand(2, garageDoorUp, garageDoorDown);
+        remoteControl.setCommand(0, () -> livingRoomLight.on(), () -> livingRoomLight.off());
+        remoteControl.setCommand(1, () -> kitchenLight.on(), () -> kitchenLight.off());
+        remoteControl.setCommand(2, () -> garageDoor.up(), () -> garageDoor.down());
 
         System.out.println(remoteControl);
 
