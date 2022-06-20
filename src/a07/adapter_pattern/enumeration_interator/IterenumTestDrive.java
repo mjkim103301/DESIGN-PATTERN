@@ -9,7 +9,7 @@ import java.util.Vector;
 public class IterenumTestDrive {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList(Arrays.asList("hello", "java", "world", "hi", "i'm", "minji"));
-        Vector<String> vector=new Vector<>(list);
+        Vector<String> vector = new Vector<>(list);
 
         System.out.println("============= iterator enumeration ==========");
         Iterator<?> iterator = new EnumerationIterator(vector.elements());
