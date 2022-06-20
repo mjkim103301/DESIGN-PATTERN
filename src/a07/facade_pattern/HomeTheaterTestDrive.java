@@ -14,13 +14,12 @@ public class HomeTheaterTestDrive {
         HomeTheaterFacade homeTheater =
                 new HomeTheaterFacade(amp, tuner, player,
                         projector, screen, lights, popper);
+
         System.out.println("=============영화=============");
         homeTheater.watchMovie("Raiders of the Lost Ark");
         homeTheater.endMovie();
 
         System.out.println("\n=============라디오=============");
-
-
         homeTheater.listenToRadio(35.4);
         homeTheater.endRadio();
     }
