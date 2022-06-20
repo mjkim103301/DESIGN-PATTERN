@@ -1,4 +1,4 @@
-package a07.adapter_pattern;
+package a07.adapter_pattern.enumeration_interator;
 
 import java.util.Enumeration;
 import java.util.Iterator;
