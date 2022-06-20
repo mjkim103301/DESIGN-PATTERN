@@ -20,8 +20,9 @@ public class EnumerationIterator implements Iterator<Object> {
         return enumeration.nextElement();
     }
 
-    @Override
-    public void remove() {
-        throw new UnsupportedOperationException();
-    }
+    //java 8 부터 Iterator 에 default 로 구현되어 있다.
+//    @Override
+//    public void remove() {
+//        throw new UnsupportedOperationException();
+//    }
 }
