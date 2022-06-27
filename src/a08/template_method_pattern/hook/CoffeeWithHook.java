@@ -3,40 +3,40 @@ package a08.template_method_pattern.hook;
 import java.io.*;
 
 public class CoffeeWithHook extends CaffeineBeverageWithHook {
- 
-	public void brew() {
-		System.out.println("필터로 커피를 우려내는 중");
-	}
- 
-	public void addCondiments() {
-		System.out.println("우유와 설탕을 추가하는 중");
-	}
- 
-	public boolean customerWantsCondiments() {
 
-		String answer = getUserInput();
+    public void brew() {
+        System.out.println("필터로 커피를 우려내는 중");
+    }
 
-		if (answer.toLowerCase().startsWith("y")) {
-			return true;
-		} else {
-			return false;
-		}
-	}
- 
-	private String getUserInput() {
-		String answer = null;
+    public void addCondiments() {
+        System.out.println("우유와 설탕을 추가하는 중");
+    }
 
-		System.out.print("커피에 우유와 설탕을 넣을까요? (y/n)? ");
+    public boolean customerWantsCondiments() {
 
-		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		try {
-			answer = in.readLine();
-		} catch (IOException ioe) {
-			System.err.println("IO 오류");
-		}
-		if (answer == null) {
-			return "no";
-		}
-		return answer;
-	}
+        String answer = getUserInput();
+
+        if (answer.toLowerCase().startsWith("y")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private String getUserInput() {
+        String answer = null;
+
+        System.out.print("커피에 우유와 설탕을 넣을까요? (y/n)? ");
+
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            answer = in.readLine();
+        } catch (IOException ioe) {
+            System.err.println("IO 오류");
+        }
+        if (answer == null) {
+            return "no";
+        }
+        return answer;
+    }
 }

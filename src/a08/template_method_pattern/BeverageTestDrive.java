@@ -6,25 +6,25 @@ import a08.template_method_pattern.hook.CoffeeWithHook;
 import a08.template_method_pattern.hook.TeaWithHook;
 
 public class BeverageTestDrive {
-	public static void main(String[] args) {
- 
-		Tea tea = new Tea();
-		Coffee coffee = new Coffee();
- 
-		System.out.println("\n홍차 준비중...");
-		tea.prepareRecipe();
- 
-		System.out.println("\n커피 준비중...");
-		coffee.prepareRecipe();
+    public static void main(String[] args) {
 
- 
-		TeaWithHook teaHook = new TeaWithHook();
-		CoffeeWithHook coffeeHook = new CoffeeWithHook();
- 
-		System.out.println("\n홍차 준비중...");
-		teaHook.prepareRecipe();
- 
-		System.out.println("\n커피 준비중...");
-		coffeeHook.prepareRecipe();
-	}
+        Tea tea = new Tea();
+        Coffee coffee = new Coffee();
+
+        System.out.println("\n홍차 준비중...");
+        tea.prepareRecipe();
+
+        System.out.println("\n커피 준비중...");
+        coffee.prepareRecipe();
+
+
+        TeaWithHook teaHook = new TeaWithHook();
+        CoffeeWithHook coffeeHook = new CoffeeWithHook();
+
+        System.out.println("\n홍차 준비중...");
+        teaHook.prepareRecipe();
+
+        System.out.println("\n커피 준비중...");
+        coffeeHook.prepareRecipe();
+    }
 }
