@@ -1,8 +1,9 @@
-package a08.template_method_pattern;
+package a08.template_method_pattern.base_template;
 
 public abstract class CaffeineBeverage {
-  
-	final void prepareRecipe() {
+
+	// 템플릿 메서드드
+public final void prepareRecipe() {
 		boilWater();
 		brew();
 		pourInCup();
@@ -14,10 +15,10 @@ public abstract class CaffeineBeverage {
 	abstract void addCondiments();
  
 	void boilWater() {
-		System.out.println("Boiling water");
+		System.out.println("물 끓이는 중");
 	}
   
 	void pourInCup() {
-		System.out.println("Pouring into cup");
+		System.out.println("컵에 따르는 중");
 	}
 }

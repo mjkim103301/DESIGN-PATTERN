@@ -1,15 +1,15 @@
-package a08.template_method_pattern;
+package a08.template_method_pattern.hook;
 
 import java.io.*;
 
-public class CoffeeWithHook extends CaffeineBeverageWithHook {
+public class TeaWithHook extends CaffeineBeverageWithHook {
  
 	public void brew() {
-		System.out.println("Dripping Coffee through filter");
+		System.out.println("찻잎을 우려내는 중");
 	}
  
 	public void addCondiments() {
-		System.out.println("Adding Sugar and Milk");
+		System.out.println("레몬을 추가하는 중");
 	}
  
 	public boolean customerWantsCondiments() {
@@ -24,15 +24,16 @@ public class CoffeeWithHook extends CaffeineBeverageWithHook {
 	}
  
 	private String getUserInput() {
+		// get the user's response
 		String answer = null;
 
-		System.out.print("Would you like milk and sugar with your coffee (y/n)? ");
+		System.out.print("차에 레몬을 넣을까요? (y/n)? ");
 
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		try {
 			answer = in.readLine();
 		} catch (IOException ioe) {
-			System.err.println("IO error trying to read your answer");
+			System.err.println("IO 오류");
 		}
 		if (answer == null) {
 			return "no";
