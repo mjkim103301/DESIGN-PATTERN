@@ -13,26 +13,32 @@ public class Menu extends MenuComponent {
         this.description = description;
     }
 
+    @Override
     public void add(MenuComponent menuComponent) {
         menuComponents.add(menuComponent);
     }
 
+    @Override
     public void remove(MenuComponent menuComponent) {
         menuComponents.remove(menuComponent);
     }
 
+    @Override
     public MenuComponent getChild(int i) {
         return menuComponents.get(i);
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public String getDescription() {
         return description;
     }
 
+    @Override
     public void print() {
         System.out.print("\n" + getName());
         System.out.println(", " + getDescription());
